@@ -1,0 +1,22 @@
+{
+  "name": "expressexercises",
+  "version": "1.0.0",
+  "description": "intro, jwt, servefile, middleware",
+  "main": "basicServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Montana-Code-School/expressExercises.git"
+  },
+  "author": "Mark Buckner <buckner.a.mark@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Montana-Code-School/expressExercises/issues"
+  },
+  "homepage": "https://github.com/Montana-Code-School/expressExercises#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
