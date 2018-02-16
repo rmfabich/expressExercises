@@ -9,6 +9,9 @@ app.listen(5000, function() {
    console.log("Listening on 5000");
 });
 
+//TODO: req and res
+
+
 //step 1: run "node basicServer.js" in a terminal while being in the 
 //expressExercises directory
 
@@ -27,3 +30,6 @@ app.listen(5000, function() {
 
 //step 5: you created a new route in step 4. Create a few more. Change the url
 //to get them to render a file. Make a new html file for each route. 
+
+//you guys are routing maestros. This is one of the most important features of 
+//web servers
