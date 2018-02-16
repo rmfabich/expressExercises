@@ -9,15 +9,11 @@ app.listen(5000, function() {
    console.log("Listening on 5000");
 });
 
-//TODO: req and res
-
-
 //step 1: run "node basicServer.js" in a terminal while being in the 
 //expressExercises directory
 
 //open a browser and type in localhost:5000 in the url bar. 
 //Hopefully you'll see the index.html in the browser!
-
 
 //step 2: make some edits to the index.html file. see them reflected in the browser
 
