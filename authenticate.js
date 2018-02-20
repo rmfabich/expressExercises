@@ -26,7 +26,8 @@ const db = [{
 
 //below is some code that authenticates a user using json web tokens. However, it doesn't 
 //check whether the password is correct. Modify and test the server (using postman) to correctly
-//compare whether the password is correct. 
+//compare whether the password is correct. You also need to pass in a string as the second arg into jwt.sign(), 
+//which will act as your secret
 
 app.get("/", (req, res) => {
     res.sendfile('index.html');
@@ -39,7 +40,7 @@ app.get("/authenticate", (req, res) =>{
         }
      });
       if (match){
-            var token = jwt.sign(user, app.get('superSecret'), {
+            var token = jwt.sign(user, app.get(''), {
             //expiresInMinutes: 1440 // expires in 24 hours, no longer valid, probs deprecated
          });
         res.json({
