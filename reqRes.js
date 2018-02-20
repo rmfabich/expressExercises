@@ -30,7 +30,7 @@ app.get("/", ()=> {
 //server
 
 //use postman to call /authenticate, passing in a username and password that exists in the "database" variable
-
+//hint: you'll need to import some middleware to parse request bodies.
 //It still doesn't work, read the code below and try to get it to respond with "you successfully logged in"
 
 
