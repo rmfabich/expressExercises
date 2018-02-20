@@ -8,4 +8,4 @@ basicServer.js -> middleware.js -> middleware2.js -> reqRes.js -> crud.js -> pro
 
 I'm not feeling comfortable with how we're going over jwt's yet. I haven't introduced middleware for checking auth, but
 I can't do that without a front end. I might have to do that when we build something with the whole stack. I also don't want
-to ONLY work on express. Id like to incorporate react into these somehow. 
+to ONLY work on express. Id like to incorporate react into these somehow. We don't really have a way of testing it either. 
