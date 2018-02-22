@@ -37,7 +37,7 @@ app.get("/", ()=> {
 
 app.post("/authenticate", (req, res)=>{
    var match = db.find((entry)=>{
-       if (entry.userName ===  req.body.hotdog){
+       if (entry.userName ===  req.body.hotdog && req.body.password === entry.password){
            res.json("you successfully logged in");  
        } else {
            res.json("password/username don't match");
