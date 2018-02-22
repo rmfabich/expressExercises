@@ -30,11 +30,12 @@ app.get("/", ()=> {
 //server
 
 //use postman to call /authenticate, passing in a username and password that exists in the "database" variable
+//you'll need use the correct HTTP method - app.post NOT app.get
 //hint: you'll need to import some middleware to parse request bodies.
 //It still doesn't work, read the code below and try to get it to respond with "you successfully logged in"
 
 
-app.get("/authenticate", (req, res)=>{
+app.post("/authenticate", (req, res)=>{
    var match = db.find((entry)=>{
        if (entry.userName ===  req.body.hotdog){
            res.json("you successfully logged in");  
