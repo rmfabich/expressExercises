@@ -2,7 +2,7 @@
 //create some fake data (an array of object), set it equal to a const. 
 
 //create some routes and handlers to serve different parts of the data object. You'll be passing in data through the req.body, 
-//like you did in reqRes
+//like you did in reqRes.js. Utilize the proper http method.
 
 //for example, if I created an array of furniture, I could return all the objects that contained the property "isChair === true"
 
