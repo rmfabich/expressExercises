@@ -25,4 +25,3 @@ var db = [{
 
 
 //use all 4 methods to mimic the correct functionality with a database. Your database will be the variable {var}
-//USE THE SAME ROUTE FOR ALL OF THEM. It's a common design pattern. 
