@@ -7,7 +7,14 @@ var scabbies = (req, res, next)=>{
   next();
 }
 
-app.use();
+var shingles = (req, res, next)=>{
+  console.log('shingles getting executed');
+  next();
+}
+
+app.use(scabbies);
+
+app.use(shingles);
 
 app.get("/", (req, res)=> {
     res.sendfile('index.html');
