@@ -39,16 +39,15 @@ app.get("/", ()=> {
 app.post("/authenticate", (req, res)=>{
    var match = db.find((entry)=>{
        if (entry.userName ===  req.body.hotdog && req.body.password === entry.password){
-           res.json("you successfully logged in");  
-       } else {
-           res.json("password/username don't match");
+           return true;
        }
    });
     
     if (!match){
-        res.json("couldn't find username");
+        res.json("you successfully logged in");
+    } else {
+        res.json("password/username don't match");
     }
-    
 });
 
 app.listen(5000, function() {
