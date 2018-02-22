@@ -19,8 +19,9 @@ var db = [{
 //here's a quick, non-technical rundown of the most common ones
 //get - grabs data or file from server. Typically used to read data from a database. Can't send a req.body with it
 //post - sends data to server. Think about authenicating a password. CAN send a req.body with it
-//put - sends data to server. Typically used to "put" a new value into a database. CAN send a req.body with it
 //delete - sends data to server. Typically used to delete a value in a database. CAN send a req.body with it. 
+
+//feel free to only utilize these three - get will read data, post will update/inject data/ and delete will remove data 
 
 
 //use all 4 methods to mimic the correct functionality with a database. Your database will be the variable {var}
