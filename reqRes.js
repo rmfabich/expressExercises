@@ -71,7 +71,30 @@ app.post("/getemail", (req, res)=>{
 //you'll need use the correct HTTP method - app.post NOT app.get
 //hint: you'll need to import some middleware to parse request bodies.
 //It still doesn't work, read the code below and try to get it to respond with "you successfully logged in"
+//You'll have to modify the word hotdog...
 
 
+<<<<<<< HEAD
+=======
+app.post("/authenticate", (req, res)=>{
+   var match = db.find((entry)=>{
+       if (entry.userName ===  req.body.hotdog && req.body.password === entry.password){
+           return true;
+       }
+   });
+    
+    if (!match){
+        res.json("you successfully logged in");
+    } else {
+        res.json("password/username don't match");
+    }
+});
+
+app.listen(5000, function() {
+   console.log("Listening on 5000");
+});
+
+
+>>>>>>> 07e44512837ea80b3866be95c7b9f33f8ea97f39
 //Lastly - create a new route and handler that responds with a username's email from a request object that contains the username
 //use /authenticate to figure it how to do it. Use Postman to test it.
