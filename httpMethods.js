@@ -1,3 +1,10 @@
+var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+
 var db = [{
     userName:"barfDude",
     password:"barfDudeRules123",
@@ -8,6 +15,50 @@ var db = [{
     password:"trouble1",
     email:"gobis@snobis.biz"
 }];
+
+
+app.get("/getData", (req,res)=> {
+    res.send(db[0].userName);
+});
+
+app.post("/sendData", (req, res)=>{
+  db.push({username: "Donald Trump"})
+  res.send("heyDude")
+});
+
+app.get("/crapData", (req, res)=> {
+  console.log(db);
+  res.send(db);
+})
+
+app.delete("/deleteData", (req, res)=>{
+  console.log("req.body: " + req.body.userName);
+  var matchedIndex = db.findIndex((entry)=>{
+    if (entry.userName === req.body.userName){
+      return true
+    } 
+ });
+db.splice(matchedIndex, 1) 
+console.log(db)
+
+
+if (typeof matchedIndex === "number"){
+     res.json("you successfully deleted email");
+ } else {
+     res.json("username and password don't match");
+ }
+
+})
+
+
+app.put("/updateData", (req, res)=>{
+  
+})
+
+app.listen(8080, function() {
+    console.log("listening on port 8080")
+});
+
 
 //copy the boilerplate from reqRes.js
 //create some fake data (an array of object), set it equal to a const. 
